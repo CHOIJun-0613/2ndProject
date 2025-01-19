@@ -14,7 +14,7 @@ tasks:
       sdk install java 23-open
       sdk default java 23-open
       sdk install gradle 8.12
-      skd default gradle 8.12
+      sdk default gradle 8.12
     command: sdk current
     openMode: split-right
   - name: MySQL_Client 
