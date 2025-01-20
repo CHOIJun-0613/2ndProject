@@ -11,9 +11,9 @@ tasks:
     openMode: split-left
   - name: JDK_Gradle
     init: |
-      sdk install java 23-open
+      echo "Y" | sdk install java 23-open
       sdk default java 23-open
-      sdk install gradle 8.12
+      echo "Y" | sdk install gradle 8.12
       sdk default gradle 8.12
     command: sdk current
     openMode: split-right
