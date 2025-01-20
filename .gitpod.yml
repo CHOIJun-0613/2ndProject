@@ -9,7 +9,7 @@ tasks:
       sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
     command: date
     openMode: split-left
-  - name: JDK_Gradle
+  - name: Java & Gradle
     init: |
       echo "Y" | sdk install java 23-open
       sdk default java 23-open
@@ -17,12 +17,12 @@ tasks:
       sdk default gradle 8.12
     command: sdk current
     openMode: split-right
-  - name: MySQL_Client 
+  - name: MySQL Client 
     init: |
       sudo apt update
       sudo apt install -y mysql-client
     openMode: tab-after
-  - name: MySQL 
+  - name: MySQL docker
     init: |
       docker-compose up -d
     command: echo "Containers are up and running!"
