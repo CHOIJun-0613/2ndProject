@@ -1,3 +1,4 @@
+
 image:
   file: .gitpod.Dockerfile
 
@@ -7,4 +8,4 @@ tasks:
       docker compose up -d
       docker ps
     openMode: tab-after
-
+    
