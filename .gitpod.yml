@@ -6,4 +6,10 @@ tasks:
     init: |
       docker-compose up -d
     command: echo "Containers are up and running!"
-    openMode: tab-after    
+    openMode: tab-after
+  - name: Timezonedo
+    init: |
+      sudo apt-get update
+      sudo apt-get install -y tzdate
+      sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
+    command: date
