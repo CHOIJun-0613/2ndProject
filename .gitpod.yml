@@ -2,30 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - name: create docker image
-    init: docker build --build-arg CACHEBUST=$(date +%s) .
-    openMode: tab-after    
-  - name: Timezonedo
-    init: |
-      sudo apt-get update
-      sudo apt-get install -y tzdate
-      sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
-    command: date
-    openMode: split-left
-  - name: Java & Gradle
-    init: |
-      echo "Y" | sdk install java 23-open
-      sdk default java 23-open
-      echo "Y" | sdk install gradle 8.12
-      sdk default gradle 8.12
-    command: sdk current
-    openMode: split-right
-  - name: MySQL Client 
-    init: |
-      sudo apt update
-      sudo apt install -y mysql-client
-    openMode: tab-after
-  - name: MySQL docker
+  - name: MySQL docker7
     init: |
       docker-compose up -d
     command: echo "Containers are up and running!"
