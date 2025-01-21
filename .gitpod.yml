@@ -6,6 +6,7 @@ tasks:
   - name: MySQL docker # docker-compose up -d
     command: |
       docker compose up -d
+      docker ps
     openMode: tab-after
 
 ports:
