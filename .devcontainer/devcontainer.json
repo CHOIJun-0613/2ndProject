@@ -2,7 +2,7 @@
     "name": "Spring Boot Dev",
     "image": "springboot-dev-container",
     "forwardPorts": [8080],
-    "workspaceFolder": "/home/dev/workspace/2ndproject",
+    "workspaceFolder": "/home/dev",
     "remoteUser": "dev",
     "customizations": {
       "vscode": {
@@ -14,8 +14,8 @@
         ]
       }
   } ,
-	"postCreateCommand": "mkdir -p /home/dev/workspace/2ndproject && chown -R dev:dev /home/dev/workspace"
-	//"mounts": [
-	//	"../:/home/dev/workspace:rw"
-	//]
+	"postCreateCommand": "mkdir -p /home/dev/workspace && chown -R dev:dev /home/dev",
+	"mounts": [
+		"../:/home/dev:rw"
+	]
   }
