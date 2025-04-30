@@ -1,0 +1,21 @@
+{
+    "name": "Spring Boot Dev",
+    "image": "springboot-dev-container",
+    "forwardPorts": [8080],
+    "workspaceFolder": "/home/dev/workspace/2ndproject",
+    "remoteUser": "dev",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "vscjava.vscode-java-pack"
+          //"ms-azuretools.vscode-docker",
+          //"Pivotal.vscode-boot-devpack",
+          // 필요한 다른VS Code 확장들을 추가할 수 있습니다.
+        ]
+      }
+  },
+	"postCreateCommand": "mkdir -p /home/dev/workspace/2ndproject && chown -R dev:dev /home/dev/workspace",
+	"mounts": [
+		"../:/home/dev/workspace:rw"
+	]
+  }
