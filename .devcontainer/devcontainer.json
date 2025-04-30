@@ -2,7 +2,7 @@
     "name": "Spring Boot Dev",
     "image": "springboot-dev-container",
     "forwardPorts": [8080],
-    "workspaceFolder": "/home/dev",
+    "workspaceFolder": "/home/dev/2ndProject",
     "remoteUser": "dev",
     "customizations": {
       "vscode": {
@@ -13,8 +13,8 @@
           // 필요한 다른VS Code 확장들을 추가할 수 있습니다.
         ]
       }
-  } ,
-	"postCreateCommand": "mkdir -p /home/dev/workspace && chown -R dev:dev /home/dev",
+  } //,
+	//"postCreateCommand": "mkdir -p /home/dev/2ndProject && chown -R dev:dev /home/dev",
 	"mounts": [
 		"../:/home/dev:rw"
 	]
